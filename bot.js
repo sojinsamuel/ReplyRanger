@@ -14,7 +14,7 @@ const twitterAccessTokenSecret = process.env.TWITTER_ACCESS_TOKEN_SECRET;
 const twitterBearerToken = process.env.TWITTER_BEARER_TOKEN;
 
 // Visit https://tweeterid.com/ to get the user ID of your bot's account
-const BOT_USER_ID = "1112655694879035392";
+const BOT_USER_ID = "XXXXXXXX";
 
 // Tokens must have read and write access (elevated permissions)
 const client = new TwitterApi({
@@ -172,8 +172,8 @@ const runTweetReply = async () => {
     console.error("An error occurred:", error);
   }
 
-  // Run the program again after ___ hour
-  await new Promise((resolve) => setTimeout(resolve, 1 * 60 * 1000));
+  // Run the program again after 48 hours (its up to you)
+  await new Promise((resolve) => setTimeout(resolve, 48 * 60 * 60 * 1000));
   runTweetReply();
 };
 
